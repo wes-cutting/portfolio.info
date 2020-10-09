@@ -1,3 +1,64 @@
+/* Development Styling */
 header {
     font-weight: bold;
+}
+
+main {
+    margin: 0;
+    margin-left: 170px;
+    text-align: center;
+}
+
+main ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+article {
+    margin: 4px;
+    border: 1px black solid;
+}
+
+section {
+    margin: 20px 0;
+    border: 2px blue solid;
+    padding: 4px;
+}
+
+section section{
+    border: 2px red solid;
+}
+
+/* Production Styling */
+a:link { 
+    text-decoration: none;
+    color: black;
+}
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:active {
+    text-decoration: underline;
+}
+
+/* Side Navigation */
+#sidenav {
+    width: 160px;
+    position: fixed;
+}
+#sidenav > aside > ul{
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+#sidenav > aside *{
+    padding-bottom: 8px;
+}
+#name {
+    margin: 0;
 }
