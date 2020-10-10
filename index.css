@@ -29,34 +29,9 @@ section section{
     border: 2px red solid;
 }
 
-#intro {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    min-height: 50vh;
-    margin: 0;
-}
-#pic {
-    max-height: 50wh;
-    max-width: 25vw;
-    /* padding: 10vh 4vw; */
-    border-radius: 100px;
-}
-#intro *{
-    font-size: 2em;
-    text-align: justify;
-    text-justify: distribute;
-    margin: 10px 20px;
-}
 #summary{
     min-height: 50vh;
     margin: 0;
-}
-.background{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -100;
 }
 
 /* Production Styling */
@@ -80,6 +55,40 @@ a:active {
 main{
     margin-left: 164px;
     background-color: rgba(112, 22, 30, 0.4);
+}
+
+.card{
+    background-color: var(--champagne);
+    color: var(--space-cadet);
+    padding: 4px;
+    border-radius: 20px;
+}
+
+#intro {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    border:none;
+}
+#intro *{
+    font-size: 2em;
+    text-align: justify;
+    text-justify: distribute;
+    margin: 10px 20px;
+}
+#pic {
+    max-height: 50wh;
+    max-width: 25vw;
+    border-radius: 100px;
+}
+#skills{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
 }
 
 /* ---- particles.js container ---- */
@@ -114,4 +123,5 @@ main{
 }
 #name {
     margin: 0;
+    margin-top: 28vh;
 }
