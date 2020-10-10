@@ -1,36 +1,68 @@
+/* Color Palette */
+:root {
+    --persian-plum: #70161E;
+    --space-cadet: #201E50;
+    --metallic-seaweed: #028090;
+    --champagne: #EEE0CB;
+    --dark-olive-green: #60712F;
+}
+
 /* Development Styling */
 header {
     font-weight: bold;
 }
-
-main {
-    margin: 0;
-    margin-left: 170px;
-    text-align: center;
-}
-
 main ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-
 article {
     margin: 4px;
     border: 1px black solid;
 }
-
 section {
     margin: 20px 0;
     border: 2px blue solid;
     padding: 4px;
 }
-
 section section{
     border: 2px red solid;
 }
 
+#intro {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    min-height: 50vh;
+    margin: 0;
+}
+#pic {
+    max-height: 50wh;
+    max-width: 25vw;
+    /* padding: 10vh 4vw; */
+    border-radius: 100px;
+}
+#intro *{
+    font-size: 2em;
+    text-align: justify;
+    text-justify: distribute;
+    margin: 10px 20px;
+}
+#summary{
+    min-height: 50vh;
+    margin: 0;
+}
+.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+
 /* Production Styling */
+body {
+    margin: 0;
+}
 a:link { 
     text-decoration: none;
     color: black;
@@ -45,11 +77,32 @@ a:hover {
 a:active {
     text-decoration: underline;
 }
+main{
+    margin-left: 164px;
+    background-color: rgba(112, 22, 30, 0.4);
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #028090;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    top: 0;
+    left: 0;
+    z-index: -100;
+  }
 
 /* Side Navigation */
 #sidenav {
     width: 160px;
+    height: 100vh;
     position: fixed;
+    padding-left: 4px;
+    background-color: rgba(96, 113, 47, 0.5);
 }
 #sidenav > aside > ul{
     list-style: none;
