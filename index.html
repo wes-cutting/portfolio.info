@@ -12,6 +12,7 @@
 </head>
 <body>
     <div id='sidenav'>
+        <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a>
         <h1 id='name'>
             <div>
                 Wesley
@@ -24,72 +25,72 @@
             <ul>
                 <li>
                     <span>
-                        <a href='#intro'>
+                        <a href='#intro' onclick="closeNav()">
                             Introduction
                         </a>
                     </span>
                 </li>
                 <li>
                     <span>
-                        <a href='#summary'>
+                        <a href='#summary' onclick="closeNav()">
                             Summary
                         </a>
                     </span>
                 </li>
                 <li>
                     <span>
-                        <a href='#skills'>
+                        <a href='#skills_title' onclick="closeNav()">
                             Skills
                         </a>
                     </span>
                 </li>
-                <li>
+                <!-- <li>
                     <div>
                         <a href='#exp'>
                             Experience
                         </a>
                     </div>
-                    <ul>
-                        <li>
+                    <ul> -->
+                        <!-- <li>
                             <a href='#personal_projects'>
                                 Personal Projects
                             </a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href='#companies'>
+                            <a href='#companies' onclick="closeNav()">
                                 Companies
                             </a>
                         </li>
                         <li>
-                            <a href='#company_projects'>
+                            <a href='#company_projects' onclick="closeNav()">
                                 Company Projects
                             </a>
                         </li>
                         <li>
-                            <a href='responsibilities'>
+                            <a href='#responsibilities_title' onclick="closeNav()">
                                 Responsibilities
                             </a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href='extracurricular'>
                                 Extracurricular
                             </a>    
-                        </li>
-                    </ul>
-                </li>
-                <li>
+                        </li> -->
+                    <!-- </ul>
+                </li> -->
+                <!-- <li>
                     <div>
                         <a href='#about'>
                             About
                         </a>
                     </div>
-                    <ul>
+                    <ul> -->
                         <li>
-                            <a href='#education'>
+                            <a href='#education' onclick="closeNav()">
                                 Education
                             </a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href='#inspiration'>
                                 Inspiration
                             </a>
@@ -105,10 +106,10 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
                 <li>
                     <span>
-                        <a href='#contact'>
+                        <a href='#contact' onclick="closeNav()">
                             Contact
                         </a>
                     </span>
@@ -117,16 +118,38 @@
         </aside>
     </div>
     <main>
+        <span id='nav_opener'
+            style="font-size:30px;cursor:pointer" 
+            onclick="openNav()">
+            &#9776;
+        </span>
+        <h2 id='backup_name'>
+            <div>
+                Wesley
+            </div>
+            <div>
+                Cutting
+            </div>
+        </h2>
         <section id='intro'>
-            <img id='pic' src='./wes.jpg'/>
-            <p class='card'>This here be a website with the purpose and intent to inform the audience about Wesley Cutting. The contents within outline the professional credentials and abilities described through skills, projects, and experiences gained through over a decade of softeware development and education.</p>
+            <img id='pic' src='./images/wes.jpg'/>
+            <p class='card-light'>This here be a portfolio with the purpose and intent to inform the audience about Wesley Cutting. The contents within outline the professional credentials and abilities described through skills, projects, and experiences gained through over a decade of softeware development and education.</p>
         </section>
         <section id='summary'>
-            Summary, Technologist
+           <p class='card-dark'>
+                Held within this portfolio is a range of information pertaining to the professional experiences gained by Wesley through the development of skills, employment with organizations, and application of those skills via projects. As well as, a section that explores more of the personal details that help paint a clearer picture of who Wes is as person and developer.  
+           </p> 
+           <p class='card-dark'>
+                Outlined immediately below are groupings of different skill sets, the header of each represent the theme of the enumerated skills. After Wesley's skills comes a section laying out his experiences to-date. Within those experiences are a list of companies that have employed Wesley throughout the years, followed by the projects he was tasked with completing at those companies, then his responsibilities within those companies. 
+           </p>
+           <p class='card-dark'>
+                Concluding the portfolio is a general about section that delves into Wesley's education, inpirations, hobbies, and aspirations. As a technologist, Wes has been immersed in technology for decades and seeks to remain immersed for decades to come. 
+           </p>
         </section>
+        <div id='skills_title' class='section-title'>Skills</div>
         <section id='skills'> 
             <!-- Make this section into a color coded bubble map  -->
-            <article class='skill card'>
+            <article class='card-light'>
                 <header>Proficient Languages</header>
                 <ul>
                     <li>JavaScript</li>
@@ -137,7 +160,7 @@
                     <li>SQL</li>
                 </ul>
             </article>
-            <article class='skill card'>
+            <article class='card-light'>
                 <header>Familiar Languages</header>
                 <ul>
                     <li>TypeScript</li>
@@ -147,7 +170,7 @@
                     <li>R#</li>
                 </ul>
             </article>
-            <article class='skill  card'>
+            <article class='card-light'>
                 <header>Libraries & Frameworks</header>
                 <ul>
                     <li>NodeJS</li>
@@ -159,7 +182,7 @@
                     <li>Bootstrap</li>
                 </ul>
             </article>
-            <article class='skill  card'>
+            <article class='card-light'>
                 <header>Standards</header>
                 <ul>
                     <li>OOP</li>
@@ -174,7 +197,7 @@
                     <li>OAuth</li>
                 </ul>
             </article>
-            <article class='skill card'>
+            <article class='card-light'>
                 <header>Development Tools</header>
                 <ul>
                     <li>MongoDB</li>
@@ -188,7 +211,7 @@
                     <li>Advanced Installer</li>
                 </ul>
             </article>
-            <article class='skill card'>
+            <article class='card-light'>
                 <header>Platforms</header>
                 <ul>
                     <li>Windows</li>
@@ -200,7 +223,7 @@
                     <li>O365</li>
                 </ul>
             </article>
-            <article class='skill  card'>
+            <article class='card-light'>
                 <header>NonDevelopment</header>
                 <ul>
                     <li>Photography</li>
@@ -211,11 +234,11 @@
             </article>
         </section>
         <section id='exp'>
-            <span>Experiences</span>
-            <section id='personal_projects'>
+            <!-- <section id='personal_projects'>
                 Personal Projects
-            </section>
+            </section> -->
             <section id='companies'>
+                <div class='section-title'>Companies</div>
                 <article class='company' id='helio'>
                     <header>Helio Training</header>
                     <span class='job-title'>Lead Instructor & Senior Adjunct</span>                    
@@ -281,282 +304,173 @@
                 </article>                
             </section>
             <section id='company_projects'>
-                <article class='comp-proj' id='fswd_camps'>
+                <div class='section-title'>Company Projects</div>
+                <article class='comp-proj card-dark' id='fswd_camps'>
                     <header>Full Stack Web Development Immersive & After Hours Boot Camps</header>
                     <span class='company-name'>Helio Training</span>
                     <p>Every two or so months Helio would launch full time and part time boot camps at either of its two locations. These camps would focus on teaching Computer Science through the lense of Web Development, diving into the MERN stack and exploring intermediate to advanced topics such as RESTful Architecture and Algorithmic Analyse. Over three years, 11 Immersive and six after hours boot camps were taught while support, through supervision and direction, was provided to over twenty others.</p>
                     <span>
-                        <span>Technologies & Concepts</span>
-                        <ul>
-                            <li>JavaScript</li>
-                            <li>MongoDB</li>
-                            <li>Express</li>
-                            <li>React</li>
-                            <li>NodeJS</li>
-                            <li>GIT</li>
-                            <li>TDD</li>
-                            <li>SDLC</li>
-                            <li>OOP</li>
-                            <li>REST</li>
-                        </ul>
+                        <span class='tech-label'>Technologies & Concepts:</span>
+                        <span class='tech'>JavaScript, MongoDB, Express, React, NodeJS, GIT, TDD, SDLC, OOP, REST</span>
                     </span>
                 </article>
-                <article class='comp-proj' id='uiux_camps'>
+                <article class='comp-proj card-dark' id='uiux_camps'>
                     <header>UI/UX Design After Hours Boot Camps</header>
                     <span class='company-name'>Helio Training</span>
                     <p>Departing from Helio’s standard program of Full Stack Web Development, this camp tackled the elements of designing efficient User Interfaces and elegant User Experiences. Exploring how to gather user data in the form of requirements, personas, interviews, and demographics, then expanding those into stories, wireframes, and prototypes. While the Full Stack camps produced competent developers, the UI/UX camps produced competent designers.</p>
                     <span>
-                        <span>Technologies & Concepts</span>
-                        <ul>
-                            <li>Adobe XD</li>
-                            <li>Figma</li>
-                            <li>UX Design Methods & Principles</li>
-                            <li>Color Theory</li>
-                            <li>Typography</li>
-                        </ul>
+                        <span class='tech-label'>Technologies & Concepts:</span>
+                        <span class='tech'>Adobe XD, Figma, UX Design Methods & Principles, Color Theory, Typography</span>
                     </span>
                 </article>
-                <article class='comp-proj' id='curriculum'>
+                <article class='comp-proj card-dark' id='curriculum'>
                     <header>Curriculum Design and Development</header>
                     <span class='company-name'>Helio Training</span>
                     <p>Technologies evolve and change over time and so must the course topics, schedule, and activities. Beyond simply researching and implementing the latest Web Development technologies and techniques, time and effort were spent developing those into a learning experience that took students unfamiliar with Computer Science and grew them into Junior Developers.</p>
                     <span>
-                        <span>Technologies & Concepts</span>
-                        <ul>
-                            <li>Canvas Learning Management System</li>
-                            <li>Lesson Planning and Design</li>
-                            <li>Project Driven Learning</li>
-                        </ul>
+                        <span class='tech-label'>Technologies & Concepts:</span>
+                        <span class='tech'>Canvas Learning Management System, Lesson Planning and Design, Project Driven Learning</span>
                     </span>
                 </article>
-                <article class='comp-proj' id='indust_collab'>
+                <article class='comp-proj card-dark' id='indust_collab'>
                     <header>Industry Collaboration Projects</header>
                     <span class='company-name'>Helio Training</span>
                     <p>As students worked towards the end of their bootcamps they were given the opportunity to work on real world development projects assigned by  partnered companies. These projects ranged from small modifications of existing systems to full systems builds from concept to production using full stack technologies and sound development practices. </p>
                     <span>
-                        <span>Technologies & Concepts</span>
-                        <ul>
-                            <li>NodeJS</li>
-                            <li>React Native</li>
-                            <li>WordPress</li>
-                            <li>GIT</li>
-                            <li>SDLC</li>
-                            <li>GraphQL</li>
-                        </ul>
+                        <span class='tech-label'>Technologies & Concepts:</span>
+                        <span class='tech'>NodeJS, React Native, WordPress, GIT, SDLC, GraphQL</span>
                     </span>
                 </article>
-                <article class='comp-proj' id='parker_sis'>
+                <article class='comp-proj card-dark' id='parker_sis'>
                     <header>Student Information System</header>
                     <span class='company-name'>Parker University</span>
                     <p>Intended as a replacement for the existing Continuing Education SIS, Genius was chosen as a solution that had increased synergy with other solutions already running in Parker’s environment. The application itself was hosted in the cloud by the vendor, however relied heavily on data that Parker hosted. Necessitating that paths of automated communication be designed and built for consistent data transfers to occur. This data included but was not limited to User/Account Creation, Student Financial information, Term/Course schedules and Student progress. </p>
                     <span>
-                        <span>Technologies & Concepts</span>
-                        <ul>
-                            <li>.NET WCF</li>
-                            <li>IIS</li>
-                            <li>SSIS</li>
-                            <li>PowerShell</li>
-                        </ul>
+                        <span class='tech-label'>Technologies & Concepts:</span>
+                        <span class='tech'>.NET WCF, IIS, SSIS, PowerShell</span>
                     </span>
                 </article>
-                <article class='comp-proj' id='parker_ems'>
+                <article class='comp-proj card-dark' id='parker_ems'>
                     <header>Event Management System</header>
                     <span class='company-name'>Parker University</span>
                     <p>In order to better coordinate events, courses and staff meetings EMS was implemented as a room scheduling tool. This platform was installed and hosted internally on Windows. It required integrations with our primary Student Information System (Jenzabar) via SQL Server Integration Service Packages and PowerShell scripts. After the main setup and installation was complete the bulk of the focus was in supporting faculty and staff as issues arose, this involved active troubleshooting with the vendor’s support team and further configurations to be implemented.</p>
                     <span>
-                        <span>Technologies & Concepts</span>
-                        <ul>
-                            <li>Linux</li>
-                            <li>IIS</li>
-                            <li>SSIS</li>
-                            <li>PowerShell</li>
-                        </ul>
+                        <span class='tech-label'>Technologies & Concepts:</span>
+                        <span class='tech'>Linux, IIS, SSIS, PowerShell</span>
                     </span>
                 </article>
-                <article class='comp-proj' id='parker_devops'>
+                <article class='comp-proj card-dark' id='parker_devops'>
                     <header>DevOps Initiatives</header>
                     <span class='company-name'>Parker University</span>
                     <p>As one of three DevOps engineers tasked with supporting, maintaining and improving existing solutions within the organization, the maintenance of twenty Enterprise level systems and their integrations became a team effort. These enterprise systems included the Bookstore Point of Sales system, the Student Information System, the Human Resource Management system, the Parker Portal, the Electronic Health Record System, and the Student Identification system. In addition to supporting existing systems, technical insight was provided during planning and design phrases on several new endeavors.</p>
                     <span>
-                        <span>Technologies & Concepts</span>
-                        <ul>
-                            <li>.NET</li>
-                            <li>Linux</li>
-                            <li>Python</li>
-                            <li>JavaScript</li>
-                            <li>PowerShell</li>
-                            <li>Cloud/On-Prem Integrations</li>
-                        </ul>
+                        <span class='tech-label'>Technologies & Concepts:</span>
+                        <span class='tech'>.NET, Linux, Python, JavaScript, PowerShell, Cloud/On-Prem Integrations</span>
                     </span>
                 </article>
-                <article class='comp-proj' id='xenatix_sysadmin'>
+                <article class='comp-proj card-dark' id='xenatix_sysadmin'>
                     <header>System Administration</header>
                     <span class='company-name'>Metrocare Services as XenatiX</span>
                     <p>The title of Deployment Engineer did not cover all the other duties as assigned. Sitting at the center of the Development, Testing, and Product Sales teams the responsibilities at XenetiX entailed Dev, Test and Prod ecosystem management on Azure Cloud services. That management involved systems deployments, troubleshooting in .NET, IIS, and SQL Server, Windows server maintenance, setup, and configurations, as well as, source control administration.</p>
                     <span>
-                        <span>Technologies & Concepts</span>
-                        <ul>
-                            <li>Azure</li>
-                            <li>.NET</li>
-                            <li>IIS</li>
-                            <li>SQL Server</li>
-                            <li>Advanced Installer</li>
-                            <li>Jenkins</li>
-                            <li>TFS</li>
-                        </ul>
+                        <span class='tech-label'>Technologies & Concepts:</span>
+                        <span class='tech'>Azure, .NET, IIS, SQL Server, Advanced Installer, Jenkins, TFS</span>
                     </span>
                 </article>
-                <article class='comp-proj' id='xenatix_devops'>
+                <article class='comp-proj card-dark' id='xenatix_devops'>
                     <header>DevOps Initiatives</header>
                     <span class='company-name'>Metrocare Services as XenatiX</span>
                     <p>In a startup environment, XenatiX lacked proper DevOps practices prior to Customer deployments, those commenced in July of 2016. Creating new branching strategies within TFS, implementing proper cloud hosting practices, improving internal & external deployment methodologies, and implementing application error handling and logging are just a few initiatives that were spearheaded as part of new DevOps standards.</p>
                     <span>
-                        <span>Technologies & Concepts</span>
-                        <ul>
-                            <li>Azure</li>
-                            <li>TFS</li>
-                            <li>.NET</li>
-                            <li>IIS</li>
-                        </ul>
+                        <span class='tech-label'>Technologies & Concepts:</span>
+                        <span class='tech'>Azure, TFS, .NET, IIS</span>
                     </span>
                 </article>
-                <article class='comp-proj' id='xenatix_envmig'>
+                <article class='comp-proj card-dark' id='xenatix_envmig'>
                     <header>Environment Migrations</header>
                     <span class='company-name'>Metrocare Services as XenatiX</span>
                     <p>A project to transition cloud hosting models, source control systems and deployment mechanisms. The cloud hosting migration involved a transfer from the classical Azure virtual machines to Azure Resource Managers, as well as configuring new environments without halting development or delaying Releases. Initially the company used TFS to manage their source code, GIT was chosen to replace TFS, this migration also occurred without stalling active product development. A part of the DevOps initiatives new deployment tools  investigated for their benefits, Jenkins was picked over the existing Team Services build definitions as the method for internal deployments.</p>
                     <span>
-                        <span>Technologies & Concepts</span>
-                        <ul>
-                            <li>Azure</li>
-                            <li>TFS</li>
-                            <li>GIT</li>
-                            <li>Jenkins</li>
-                        </ul>
+                        <span class='tech-label'>Technologies & Concepts:</span>
+                        <span class='tech'>Azure, TFS, GIT, Jenkins</span>
                     </span>
                 </article>
-                <article class='comp-proj' id='xenatix_installer'>
+                <article class='comp-proj card-dark' id='xenatix_installer'>
                     <header>Application Installer</header>
                     <span class='company-name'>Metrocare Services as XenatiX</span>
                     <p>Enabling the automated and silent installation and configuration of a modular application to Windows based environments. Components installed and configured include a SQL Server Database schema, Seed Data, SQL Server Reporting Services, SQL Server Integration Services, Internet Information Services (IIS) Websites & Application Pools, .NET and Angular Webpage Artifacts. The Installer is used internally and externally to deploy the EHR system to development and production environments. </p>
                     <span>
-                        <span>Technologies & Concepts</span>
-                        <ul>
-                            <li>Advanced Installer</li>
-                            <li>Jenkins</li>
-                            <li>SQL Server</li>
-                            <li>IIS</li>
-                            <li>.NET</li>
-                        </ul>
+                        <span class='tech-label'>Technologies & Concepts:</span>
+                        <span class='tech'>Advanced Installer, Jenkins, SQL Server, IIS, .NET</span>
                     </span>
                 </article>
-                <article class='comp-proj' id='amx_vis2'>
+                <article class='comp-proj card-dark' id='amx_vis2'>
                     <header>Device and Service Management Server: Vision2</header>
                     <span class='company-name'>AMX by Harman</span>
                     <p>A central server providing Admin control, configuration and management of encoders, decoders, set top boxes, and livestream channels. The solution gives IT Admins the tools to monitor and control all endpoints in a networked ecosystem. </p>
                     <span>
-                        <span>Technologies & Concepts</span>
-                        <ul>
-                            <li>Adobe Flex</li>
-                            <li>C#</li>
-                            <li>IIS</li>
-                            <li>GIT</li>
-                            <li>Windows Server</li>
-                            <li>REST</li>
-                        </ul>
+                        <span class='tech-label'>Technologies & Concepts:</span>
+                        <span class='tech'>Adobe Flex, C#, IIS, GIT, Windows Server, REST</span>
                     </span>
                 </article>
-                <article class='comp-proj' id='amx_encoder'>
+                <article class='comp-proj card-dark' id='amx_encoder'>
                     <header>A/V Encoder Web Portal: NMX-1100 H264 Encoder</header>
                     <span class='company-name'>AMX by Harman</span>
                     <p>A web interface to configure and utilize a physical audio/video encoding device, allowing for over one hundred configurable options to encode, record, stream and administrate over hardware installed throughout a company’s work environment. The mobile friend web application was hosted via a C++ Web Server loaded into the firmware on each encoder.</p>
                     <span>
-                        <span>Technologies & Concepts</span>
-                        <ul>
-                            <li>AngularJS</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>C++</li>
-                            <li>SVN</li>
-                        </ul>
+                        <span class='tech-label'>Technologies & Concepts:</span>
+                        <span class='tech'>AngularJS, HTML, CSS, C++, SVN</span>
                     </span>
                 </article>
-                <article class='comp-proj' id='amx_composer'>
+                <article class='comp-proj card-dark' id='amx_composer'>
                     <header>Network Media Signage Installer: Composer</header>
                     <span class='company-name'>AMX by Harman</span>
                     <p>Took the existing product installer written in a legacy technology and updated it to match the new feature sets and technology standards. The new Windows installer setup databases, configured IIS, ran registry scripts, installed third party software, installed a Windows Service, and placed directories and files on disk. </p>
                     <span>
-                        <span>Technologies & Concepts</span>
-                        <ul>
-                            <li>WIX to Advanced Installer</li>
-                            <li>SQL Server</li>
-                            <li>IIS</li>
-                            <li>Windows Installer</li>
-                            <li>Sindows Services</li>
-                            <li>C#</li>
-                        </ul>
+                        <span class='tech-label'>Technologies & Concepts:</span>
+                        <span class='tech'>WIX to Advanced Installer, SQL Server, IIS, Windows Installer, Windows Services, C#</span>
                     </span>
                 </article>
-                <article class='comp-proj' id='usdb_ecom'>
+                <article class='comp-proj card-dark' id='usdb_ecom'>
                     <header>USDB E-Commerce Website</header>
                     <span class='company-name'>Utah School for the Deaf and the Blind</span>
                     <p>Teachers order various materials from the Utah School for the Deaf and the Blind on a yearly basis, using this system the employees will not have to manually enter in those orders. Teachers can browse materials, create and track orders, manage student information. Billing is handled via each district’s school funding, teachers are able to order the necessary material for their students without a lengthy back and forth manual process.  </p>
                     <span>
-                        <span>Technologies & Concepts</span>
-                        <ul>
-                            <li>ASP.NET MVC 4</li>
-                            <li>WCF</li>
-                            <li>AWS</li>
-                            <li>GIT</li>
-                            <li>SAP Business One</li>
-                            <li>JavaScript</li>
-                        </ul>
+                        <span class='tech-label'>Technologies & Concepts:</span>
+                        <span class='tech'>ASP.NET MVC 4, WCF, AWS, GIT, SAP Business One, JavaScript</span>
                     </span>
                 </article>
-                <article class='comp-proj' id='bosch_intern'>
+                <article class='comp-proj card-dark' id='bosch_intern'>
                     <header>Bosch Enterprise Project</header>
                     <span class='company-name'>Bosch</span>
                     <p>Using an existing Bosch testing API and prototype hardware our team developed test suites for exisitng and future prototypes. We made direct modifications to the testing API and open source project to improve performance.</p>
                     <span>
-                        <span>Technologies & Concepts</span>
-                        <ul>
-                            <li>.NET</li>
-                            <li>Nuget</li>
-                            <li>Bosch Software & Hardware</li>
-                            <li>GIT</li>
-                        </ul>
+                        <span class='tech-label'>Technologies & Concepts:</span>
+                        <span class='tech'>.NET, Nuget, Bosch Software & Hardware, GIT</span>
                     </span>
                 </article>
-                <article class='comp-proj' id='rentler_intern'>
+                <article class='comp-proj card-dark' id='rentler_intern'>
                     <header>Rentler Enterprise Project</header>
                     <span class='company-name'>Rentler</span>
                     <p>An ASP.NET MVC 4 internal solution Administration Panel designed to manage Rentler’s Property Management site. Features include: live reporting, handling of flagged listings, etc.</p>
                     <span>
-                        <span>Technologies & Concepts</span>
-                        <ul>
-                            <li>.NET</li>
-                            <li>Azure</li>
-                            <li>GIT</li>
-                            <li>SQL</li>
-                        </ul>
+                        <span class='tech-label'>Technologies & Concepts:</span>
+                        <span class='tech'>.NET, Azure, GIT, SQL</span>
                     </span>
                 </article>
-                <article class='comp-proj' id='capstone'>
+                <article class='comp-proj card-dark' id='capstone'>
                     <header>Scouter Drone Capstone</header>
                     <span class='company-name'>Neumont University</span>
                     <p> An automated mapping drone built using microcontroller technologies to gather environment information and render a map of a two dimensional enclosed area to the screen. Manual control of the drone was available via and an Xbox Live controller or a desktop application.</p>
                     <span>
-                        <span>Technologies & Concepts</span>
-                        <ul>
-                            <li>Arduino</li>
-                            <li>XNA</li>
-                            <li>GIT</li>
-                            <li>C</li>
-                        </ul>
+                        <span class='tech-label'>Technologies & Concepts:</span>
+                        <span class='tech'>Arduino, XNA, GIT, C</span>
                     </span>
                 </article>
             </section>
+            <div id='responsibilities_title' class='section-title'>Responsibilities</div>
             <section id='responsibilities'>
-                <article class='resp' id='resp_helio'>
+                <article class='resp card-light' id='resp_helio'>
                     <header>Helio Training</header>
                     <ul>
                         <li>Mentor, educate and train students</li>
@@ -565,7 +479,7 @@
                         <li>Develop and define operational processes for improving the students’ experience</li>
                     </ul>
                 </article>
-                <article class='resp' id='resp_pm'>
+                <article class='resp card-light' id='resp_pm'>
                     <header>Publish.Me</header>
                     <ul>
                         <li>Architect and design application schemas, user experiences, and system components</li>
@@ -574,7 +488,7 @@
                         <li>Adhere to exceptional development standards and practices</li>
                     </ul>
                 </article>
-                <article class='resp' id='resp_insonmiac'>
+                <article class='resp card-light' id='resp_insonmiac'>
                     <header>Insomniac Events</header>
                     <ul>
                         <li>Proactively seek out and provide aid to attendees in need</li>
@@ -582,7 +496,7 @@
                         <li>Rapid familization of new venues and event resources</li>
                     </ul>
                 </article>
-                <article class='resp' id='resp_parker'>
+                <article class='resp card-light' id='resp_parker'>
                     <header>Parker University</header>
                     <ul>
                         <li>Maintain integrations for nearly two dozen enterprise applications</li>
@@ -590,7 +504,7 @@
                         <li>Troubleshoot help desk tickets</li>
                     </ul>
                 </article>
-                <article class='resp' id='resp_xenatix'>
+                <article class='resp card-light' id='resp_xenatix'>
                     <header>Metrocare Services as XenatiX</header>
                     <ul>
                         <li>Deploy modular systems to Customer and Azure hosted environments</li>
@@ -599,7 +513,7 @@
                         <li>Troubleshoot onsite with Customers during Releases</li>
                     </ul>
                 </article>
-                <article class='resp' id='resp_amx'>
+                <article class='resp card-light' id='resp_amx'>
                     <header>AMX by Harman</header>
                     <ul>
                         <li>Develop and maintain applications  against fluctuating requirements</li>
@@ -607,7 +521,7 @@
                         <li>Guide development amongst fellow team members</li>
                     </ul>
                 </article>
-                <article class='resp' id='resp_usdb'>
+                <article class='resp card-light' id='resp_usdb'>
                     <header>Utah School for the Deaf and the Blind</header>
                     <ul>
                         <li>Design and implement e-commerce website</li>
@@ -615,7 +529,7 @@
                         <li>Other Duties as assigned (SQL Query Writing, Technical Consulting, Unit Testing)</li>
                     </ul>
                 </article>
-                <article class='resp' id='resp_bosch'>
+                <article class='resp card-light' id='resp_bosch'>
                     <header>Bosch</header>
                     <ul>
                         <li>Create a testing suite for Pan, Tilt, Zoom Security Cameras</li>
@@ -623,7 +537,7 @@
                         <li>Update Open Source libraries to meet development needs</li>
                     </ul>
                 </article>
-                <article class='resp' id='resp_rentler'>
+                <article class='resp card-light' id='resp_rentler'>
                     <header>Rentler</header>
                     <ul>
                         <li>Design and implement internal solutions for Reporting and Property Management</li>
@@ -632,40 +546,41 @@
                     </ul>
                 </article>
             </section>
-            <section id='extracurricular'>
+            <!-- <section id='extracurricular'>
                 Extracurricular
-            </section>
+            </section> -->
         </section>
-        <section id='about'>
-            <span>About</span>
+        <!-- <div class='section-title'>About</div>
+        <section id='about'> -->
             <section id='education'>
-                <article class='program' id='snhu'>
+                <div class='section-title'>Education</div>
+                <article class='program card-dark' id='snhu'>
                     <header>Masters in Information Systems</header>
                     <span class='school'>Southern New Hampshire University</span>
                     <span class='date-attended'>March 2020 - March 2022</span>
                 </article>
-                <article class='program' id='emt'>
+                <article class='program card-dark' id='emt'>
                     <header>Emergency Medical Technician</header>
                     <span class='school'>EMT Utah</span>
                     <span class='date-attended'>January 2020 - January 2021</span>
                 </article>
-                <article class='program' id='cpr'>
+                <article class='program card-dark' id='cpr'>
                     <header>Adult and Pediatric First Aid/CPR/AED</header>
                     <span class='school'>The American Red Cross</span>
                     <span class='date-attended'>March 2019</span>
                 </article>
-                <article class='program' id='fullsail'>
+                <article class='program card-dark' id='fullsail'>
                     <header>Bachelors in Audio Production</header>
                     <span class='school'>Full Sail University</span>
                     <span class='date-attended'>April 2016 - April 2018</span>
                 </article>
-                <article class='program' id='neumont'>
+                <article class='program card-dark' id='neumont'>
                     <header>Bachelors in Computer Science</header>
                     <span class='school'>Neumont University</span>
                     <span class='date-attended'>July 2010 - December 2013</span>
                 </article>
             </section>
-            <section id='inspirations'>
+            <!-- <section id='inspirations'>
                 Inspirations
             </section>
             <section id='hobbies'>
@@ -674,14 +589,29 @@
             <section id='aspirations'>
                 Aspirations
             </section>
-        </section>
+        </section> -->
         <section id='contact'>
-            Contact Me
+            <div class='section-title'>Contact</div>
+            <form id="contact-form" class="card-light">
+                <input type="hidden" name="contact_number">
+                <label>Name</label>
+                <input id="form_name" type="text" name="from_name">
+                <label>Email</label>
+                <input id="form_email" type="email" name="reply_to">
+                <label>Message</label>
+                <textarea id="form_message" name="message"></textarea>
+                <input type="submit" value="Send">
+            </form>
+            <div id='other_contact' class='card-light'>
+                <a href="https://www.linkedin.com/in/wesleycutting/" target="_blank">
+                    <img width='100px' src='./images/linkedin.png'>
+                </a> 
+                <a href="https://github.com/wes-cutting" target="_blank">
+                    <img width='100px' src='./images/github.webp'>
+                </a>       
+            </div>
         </section>
     </main>
-    <footer id='bottom'>
-        Footer
-    </footer>
     <!-- particles.js container --> 
     <div id="particles-js"></div> 
     <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
@@ -689,5 +619,8 @@
     <!-- stats.js lib --> 
     <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
     <script src='/particles.js'></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src='/index.js'></script>
 </body>
 </html>

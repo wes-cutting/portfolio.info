@@ -7,36 +7,10 @@
     --dark-olive-green: #60712F;
 }
 
-/* Development Styling */
-header {
-    font-weight: bold;
-}
-main ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-article {
-    margin: 4px;
-    border: 1px black solid;
-}
-section {
-    margin: 20px 0;
-    border: 2px blue solid;
-    padding: 4px;
-}
-section section{
-    border: 2px red solid;
-}
-
-#summary{
-    min-height: 50vh;
-    margin: 0;
-}
-
 /* Production Styling */
 body {
     margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 a:link { 
     text-decoration: none;
@@ -55,27 +29,120 @@ a:active {
 main{
     margin-left: 164px;
     background-color: rgba(112, 22, 30, 0.4);
+    text-align: justify;
+    text-justify: distribute;
+}
+main ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+header {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+}
+input, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-.card{
+.section-title{
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+    text-align: center;
+    font-size: 4em;
+    font-style: italic;
+}
+.card-light{
     background-color: var(--champagne);
     color: var(--space-cadet);
-    padding: 4px;
+    box-shadow: 0px 0px 4px .2em var(--persian-plum);
+    padding: 1em;
     border-radius: 20px;
 }
+.card-dark {
+    font-size: 2em;
+    background-color: var(--space-cadet);
+    color: var(--champagne);
+    padding: 1em;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px .2em var(--persian-plum);
+}
+.company{
+    background-color: var(--metallic-seaweed);
+    font-size: 1.5em;
+    margin: 0 10%;
+    padding-top: 5px;
+    border-radius: 1em;
+    box-shadow: 0px 0px 4px .2em var(--space-cadet);
+}
+.company span{
+    font-style: italic;
+    font-size: 1.2;
+    display: block;
+    text-align: center;
+}
+.company p{
+    margin-top: 0px;
+    padding: 1em;
+}
+.comp-proj{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
+    margin: 20px 15%;
+}
+.company-name{
+    font-style: italic;
+}
+.tech-label{
+    font-weight: bold;
+    margin-right: 3px;
+}
+.tech{
+    font-style: italic; 
+}
+.resp {
+    text-align: center;
+    margin: .3em;
+    font-size: 1.3em;
+}
+.program{
+    margin: 20px 20vw;
+}
+.program span{
+    font-style: italic;
+    font-size: 1.2em;
+    display: block;
+    text-align: center;
+}
 
+#backup_name, #nav_opener{
+    visibility: hidden;
+    margin: 0;
+}
+#nav_opener{
+    position: fixed;
+}
+#closebtn{
+    font-size: 4em;
+}
 #intro {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    border:none;
 }
 #intro *{
     font-size: 2em;
-    text-align: justify;
-    text-justify: distribute;
     margin: 10px 20px;
 }
 #pic {
@@ -83,12 +150,43 @@ main{
     max-width: 25vw;
     border-radius: 100px;
 }
+#summary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15%;  
+}
 #skills{
     display: flex;
     text-align: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
     border: none;
+    font-size: 1.5em;
+}
+#responsibilities {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#contact{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#contact form{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    font-size: 2em;
+}
+#other_contact{
+    margin: 5vh 0;
+    width: 20vw;
+    text-align: center;
 }
 
 /* ---- particles.js container ---- */
@@ -106,6 +204,9 @@ main{
   }
 
 /* Side Navigation */
+#closebtn{
+    visibility: hidden;
+}
 #sidenav {
     width: 160px;
     height: 100vh;
@@ -124,4 +225,76 @@ main{
 #name {
     margin: 0;
     margin-top: 28vh;
+}
+
+
+@media only screen and (max-width: 700px) {
+    main{
+        margin: 0;
+        width: 100vw;
+        text-align: left;
+    }
+    section{
+        margin: 15vh 0;
+    }
+    aside{
+        font-size: 1.6em;
+    }
+
+    .card-light{
+        padding: 2vw;
+    }
+    .card-dark{
+        font-size: 1.5em;
+        padding: 2vw;
+    }
+    .company{
+        margin: 0 4vw;
+    }
+    .comp-proj{
+        margin: 4vh 4vw;
+    }
+    .program{
+        font-size: 1.2em;
+        margin: 4vh 4vw;
+    }
+
+    #backup_name{
+        margin:0;
+        visibility: visible;
+        text-align: center;
+        font-size: 4em;
+    }
+    #name{
+        display: none;
+    }
+    #nav_opener{
+        visibility: visible;
+        margin-left: 2vw;
+    }
+    #sidenav{
+        visibility: hidden;
+    }
+    #intro{
+        flex-direction: column;
+        font-size: .8em;
+    }
+    #pic{
+        max-width: 80vw;
+    }
+    #summary{
+        padding: 5vw;
+    }
+    #skills article{
+        margin-bottom: 3vh;
+    }
+    #contact{
+        margin-bottom: 0;
+    }
+    #contact form{
+        width: 90vw;
+    }
+    #other_contact{
+        width: 80vw;
+    }
 }
